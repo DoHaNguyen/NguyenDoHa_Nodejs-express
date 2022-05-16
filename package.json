@@ -1,0 +1,36 @@
+{
+  "name": "expess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.0.10",
+    "express": "^4.17.3",
+    "params": "^0.1.1",
+    "popups": "^1.1.3",
+    "use-query-params": "^1.2.3"
+  },
+  "devDependencies": {
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.0.2",
+    "express-session": "^1.17.2",
+    "md5": "^2.3.0",
+    "mongoose": "^6.2.11",
+    "mongoose-encryption": "^2.1.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.0.0"
+  }
+}

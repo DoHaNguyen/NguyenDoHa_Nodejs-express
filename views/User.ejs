@@ -1,0 +1,70 @@
+<%- include('./header.ejs') -%>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <%- include('./navbar.ejs'); -%>
+  <%- include('./sidebar.ejs') -%>
+  <div class="content-wrapper">
+    <div class="content-header" style="background-color: linen;">
+      <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <h1 class="breadcrumb">
+            <span class="breadcrumb-item active" aria-current="page" style="padding-left:50%; color: black;">Quản lí nhân viên</span>
+          </h1>
+        </nav>
+          
+      </div>
+    </div>
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+      <div class="col-md-12" style="padding-top: 10px;padding-bottom: 10px;">
+        <div class="col md-10" style="padding-left: 93%">
+          <a href="/adduser" class="border-shadow">
+            <span class="btn btn-light" style="color: blue;">Thêm nhân viên <i class="fa-solid fa-user"></i></span>
+          </a>
+        </div>
+    </div>
+      <div class="col md-12">
+      <form action="#" method="post">
+        <table class="table">
+          <thead class="thead-dask" style="background-color:cadetblue;">
+            <tr style="font-weight: bolder; color: white;">
+              <td>Id</td>
+              <td>Tên nhân viên</td>
+              <td>Công việc</td>
+              <td>Số điện thoại</td>
+              <td>Action</td>
+            </tr>
+          
+          <% for(i=0;i<data.length;i++){ %>
+    
+            <tbody>
+              <td><%- i+1 -%></td>
+              <td><%- data[i].user -%></td>
+              <td><%- data[i].job -%></td>
+              <td><%- data[i].phone -%></td>
+              <td>
+            <a href="/userupdate/<%- data[i]._id -%>" class="btn border-shadow update">
+              <span class="btn btn-light" style="color: blue;"><i class="fas fa-pencil-alt" style="color: blue;"></i></span>
+            </a>
+            <a class="btn border-shadow delete">
+              <span class="btn btn-light"><i class="fas fa-times"></i></span>
+            </a>
+          </td>
+            </tbody>
+            <% } %>
+          </thead>
+        </table>
+      </form>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <%- include('./footter.ejs') -%>
+</div>
+<script src="backend/plugins/jquery/jquery.min.js"></script>
+<script src="backend/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="backend/dist/js/adminlte.min.js"></script>
+</body>
+</html>

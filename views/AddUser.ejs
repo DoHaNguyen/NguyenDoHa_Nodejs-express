@@ -1,0 +1,52 @@
+<%- include('./header.ejs') -%>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <%- include('./navbar.ejs'); -%>
+  <%- include('./sidebar.ejs') -%>
+  <div class="content-wrapper">
+    <div class="content-header" style="background-color: linen;">
+      <div class="container-fluid">
+        
+        <nav aria-label="breadcrumb">
+          <h1 class="breadcrumb">
+            <span class="breadcrumb-item active" aria-current="page" style="color: black;padding-left: 50%;
+            ">Thêm nhân viên</span>
+          </h1>
+        </nav>
+  
+      </div>
+    </div>
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+    <div class="col md-12">
+      <div class="col md-8">
+        <form action="/guiadduser" method="post">
+          <div class="form-group">
+            <label>Tên nhân viên</label>
+            <input type="text" name="namenvdk" class="form-control" placeholder="Nhập tên nhân viên">
+          </div>
+          <div class="form-group">
+            <label>Công việc</label>
+            <input type="text" name="jobnvdk" class="form-control" placeholder="Nhập công việc">
+          </div>
+          <div class="form-group">
+            <label>Số điện thoại</label>
+            <input type="text" name="phonenvdk" class="form-control"  placeholder="nhập số điện thoại">
+          </div>
+         
+          <button type="submit" class="btn btn-primary">Đăng kí</button>
+        </form>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <%- include('./footter.ejs') -%>
+</div>
+<script src="backend/plugins/jquery/jquery.min.js"></script>
+<script src="backend/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="backend/dist/js/adminlte.min.js"></script>
+</body>
+</html>
